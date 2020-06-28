@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colors">colors</string-array>
+    <string-array name="icons">icons</string-array>
+</resources>
