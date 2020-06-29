@@ -4,21 +4,31 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+
+import static com.example.fat4you.R.id.buttom;
 
 public class listofproducts extends AppCompatActivity {
 
@@ -27,15 +37,22 @@ public class listofproducts extends AppCompatActivity {
     ArrayList<Recipit> recipitArrayList;
     ListView listView;
     String product;
+   ImageView imageView;
+    StorageReference storageReference;
+    TextView top,buttom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listofproducts);
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
+        storageReference= FirebaseStorage.getInstance().getReference();
+       imageView=findViewById(R.id.listimage);
         product = getIntent().getStringExtra("product");
         listView = findViewById(R.id.listView);
+        top=findViewById(R.id.top);
+        buttom=findViewById(R.id.buttom);
+
         recipitArrayList = new ArrayList<>();
         getListOfSameProduct();
 
@@ -67,15 +84,36 @@ public class listofproducts extends AppCompatActivity {
     }
 
     private void updateUI() {
+
         ArrayList<String> arrayList = new ArrayList<>();
 
-        for (int i =0;i<recipitArrayList.size();i++){
-            arrayList.add(recipitArrayList.get(i).getTitle());
+        for (int i =0;i<recipitArrayList.size();i++) {
+            final StorageReference sref=storageReference.child("Product Images/").child(recipitArrayList.get(i).getImagePath()+".png");
+
+            arrayList.add(recipitArrayList.get(i).getTitle()+recipitArrayList.get(i).getEmail());
+
+            sref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+
+                    Toast.makeText(listofproducts.this, sref.toString(), Toast.LENGTH_SHORT).show();
+                    Glide.with(getApplicationContext())
+                            .load(uri)
+                            .into(imageView);
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(listofproducts.this, "failed to download", Toast.LENGTH_SHORT).show();
+                }
+            });
 
 
         }
 
-        ArrayAdapter adapter = new ArrayAdapter(this,R.layout.simplerow,arrayList.toArray());
+
+        ArrayAdapter adapter = new ArrayAdapter(this,R.layout.simplerow,R.id.top,arrayList.toArray());
 
         listView.setAdapter(adapter);
 
@@ -90,5 +128,7 @@ public class listofproducts extends AppCompatActivity {
             }
         });
     }
+
+
 
 }
