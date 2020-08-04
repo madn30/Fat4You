@@ -18,7 +18,6 @@
         <activity android:name=".AddRecipit" />
         <activity android:name=".listofproducts" />
         <activity android:name=".Single_View" />
-        <activity android:name=".ListProducts" />
         <activity android:name=".AddProduct" />
         <activity android:name=".SecondPage" />
         <activity android:name=".SignUp" />

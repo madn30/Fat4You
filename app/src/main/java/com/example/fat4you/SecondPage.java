@@ -45,7 +45,7 @@ private int count;
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("count");
         mDatabase.addValueEventListener(new ValueEventListener() {
-            private String TAG=ListProducts.class.getSimpleName();
+            private String TAG=listofproducts.class.getSimpleName();
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 //               count=dataSnapshot.child("count").getValue(Integer.TYPE);

@@ -54,6 +54,7 @@
                 android:padding="16dp"
                 android:weightSum="100">
 
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -118,7 +119,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="#dedede" />
-
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri"
+                android:padding="16dp"
+                android:textColor="#444444"
+                android:textSize="16sp" />
             <ScrollView
 
                 android:layout_width="match_parent"
@@ -134,7 +142,9 @@
                     android:textSize="16sp" />
 
 
+
             </ScrollView>
+
 
             <Button
                 android:layout_width="match_parent"
