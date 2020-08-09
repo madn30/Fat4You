@@ -36,7 +36,7 @@ public class SecondPage extends AppCompatActivity {
 private int count;
     ImageView Profile;
     DatabaseReference mDatabase;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,30 +98,30 @@ private int count;
                         int number = generator.nextInt(5) + 1;
                         // The '5' is the number of activities
 
-                        Class activity = null;
+                        String activity = null;
 
                         // Here, we are checking to see what the output of the random was
                         switch (number) {
                             case 1:
                                 // E.g., if the output is 1, the activity we will open is ActivityOne.class
-                                activity = listofproducts.class;
+                                activity = "rice";
                                 break;
                             case 2:
-                                activity = listofproducts.class;
+                                activity = "potato";
                                 break;
                             case 3:
-                                activity = listofproducts.class;
+                                activity = "pasta";
                                 break;
                             case 4:
-                                activity = listofproducts.class;
+                                activity = "fish";
                                 break;
                             default:
-                                activity = SecondPage.class;
+                                activity = "milk";
                                 break;
                         }
                         // We use intents to start activities
                         Intent intent = new Intent(SecondPage.this, listofproducts.class);
-                        intent.putExtra("product","rice");
+                        intent.putExtra("product",activity);
 
                         startActivity(intent);
                 }
