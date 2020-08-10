@@ -34,14 +34,33 @@ public class SecondPage extends AppCompatActivity {
     FirebaseAuth mAuth;
     Dialog myDialog;
 private int count;
-    ImageView Profile;
+    ImageView LogOut;
     DatabaseReference mDatabase;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_page);
+
+
+
+        LogOut = findViewById(R.id.LogOut);
+        LogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                LoginManager.getInstance().logOut();
+                startActivity(new Intent(SecondPage.this, MainActivity.class));
+            }
+        });
+
+
+
+
+
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("count");
         mDatabase.addValueEventListener(new ValueEventListener() {
@@ -64,7 +83,7 @@ private int count;
 
         AllAngleExpandableButton button = (AllAngleExpandableButton) findViewById(R.id.button_expandable);
         final List<ButtonData> buttonDatas = new ArrayList<>();
-        int[] drawable = {R.drawable.menu, R.drawable.random, R.drawable.logoutt, R.drawable.like,R.drawable.plus};
+        int[] drawable = {R.drawable.menu, R.drawable.random, R.drawable.like,R.drawable.add};
         for (int i = 0; i < drawable.length; i++) {
             ButtonData buttonData = ButtonData.buildIconButton(this, drawable[i], 0);
             buttonDatas.add(buttonData);

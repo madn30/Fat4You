@@ -9,13 +9,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="#0C142C"
         android:paddingTop="24dp"
         android:theme="@style/AppTheme.AppBarOverlay"
         app:elevation="0dp">
 
-<Toolbar
-    android:id="@+id/toolbar"
+        <Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:popupTheme="@style/AppTheme.PopupOverlay"
@@ -30,7 +30,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center">
 
 
                     <TextView
@@ -38,9 +39,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:fontFamily="@font/calibri"
-                        android:text="Fat4U"
+                        android:text="ברוך הבא"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp" />
+                        android:textSize="36sp" />
 
 
                 </RelativeLayout>
@@ -69,222 +70,23 @@
 
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="4dp"
-                    android:fontFamily="@font/calibri"
-                    android:padding="8dp"
-                    android:text="מוצרים לפי:"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:layout_width="395dp"
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="8dp">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/carbohydrates" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/calibri"
-                                        android:text="פחמימות"
-                                        android:textColor="#3C3C3C"
-                                        android:textSize="16sp" />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_alignParentEnd="true"
-                                        android:src="@drawable/ic_arrow_forward_black_24dp" />
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/meat" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/calibri"
-                                        android:text="בשר"
-                                        android:textColor="#3C3C3C"
-                                        android:textSize="16sp" />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_alignParentEnd="true"
-                                        android:src="@drawable/ic_arrow_forward_black_24dp" />
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/fruit" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/calibri"
-                                        android:text="פירות"
-                                        android:textColor="#3C3C3C"
-                                        android:textSize="16sp" />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_alignParentEnd="true"
-                                        android:src="@drawable/ic_arrow_forward_black_24dp" />
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="12dp">
-
-                            <LinearLayout
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
-                                    android:src="@drawable/vegtable" />
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/calibri"
-                                        android:text="ירקות"
-                                        android:textColor="#3C3C3C"
-                                        android:textSize="16sp" />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_alignParentEnd="true"
-                                        android:src="@drawable/ic_arrow_forward_black_24dp" />
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
-                </HorizontalScrollView>
-
-                <TextView
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
+                    android:background="#0C142C"
                     android:fontFamily="@font/calibri"
+                    android:gravity="center"
                     android:padding="8dp"
-                    android:text="המצרכים שלך"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:text="תפריט"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#051732"
                     android:orientation="vertical"
                     android:paddingLeft="8dp"
                     android:paddingTop="8dp"
@@ -314,10 +116,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/pasta" />
+                                    android:src="@drawable/pastanew" />
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
+
+
+                                android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:background="#4D000000"
@@ -326,11 +130,13 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="פסטה"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
 
@@ -352,11 +158,12 @@
                                 android:layout_height="wrap_content">
 
                                 <ImageView
+
                                     android:id="@+id/riceimg"
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/rice" />
+                                    android:src="@drawable/ricenew" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -368,11 +175,13 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="אורז"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
 
@@ -405,7 +214,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/fish" />
+                                    android:src="@drawable/fishnew" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -417,11 +226,13 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="דגים"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
 
@@ -449,7 +260,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/mince" />
+                                    android:src="@drawable/meatnew" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -461,11 +272,13 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="בשר טחון"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
 
@@ -481,18 +294,20 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:weightSum="100"
-                        android:layout_marginBottom="8dp">
+                        android:weightSum="100">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="8dp"
+
                             android:layout_weight="50"
                             app:cardCornerRadius="16dp">
 
                             <RelativeLayout
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -501,23 +316,27 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/potato" />
+                                    android:src="@drawable/potatonew" />
 
                                 <LinearLayout
+
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="1dp"
                                     android:background="#4D000000"
                                     android:orientation="vertical"
                                     android:padding="8dp">
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="תפוח אדמה"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>
@@ -543,7 +362,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/milk" />
+                                    android:src="@drawable/milknew" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -555,11 +374,13 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
+
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/calibri"
+                                        android:gravity="center"
                                         android:text="מוצרי חלב"
                                         android:textColor="#FFFFFF"
-                                        android:textSize="14sp"
+                                        android:textSize="24sp"
                                         android:textStyle="bold" />
 
 
@@ -597,17 +418,11 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_home_gray_24dp" />
+                    android:src="@drawable/homenew" />
 
-                <View
-                    android:layout_width="84dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/colorPrimaryDark" />
 
             </LinearLayout>
 
@@ -641,6 +456,7 @@
 
 
             <LinearLayout
+
                 android:id="@+id/person_linear_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -648,20 +464,14 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/profile"
+                    android:id="@+id/LogOut"
 
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_person_gray_24dp" />
+                    android:src="@drawable/logoutnew" />
 
-                <View
-                    android:layout_width="84dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:visibility="invisible" />
+
 
             </LinearLayout>
 

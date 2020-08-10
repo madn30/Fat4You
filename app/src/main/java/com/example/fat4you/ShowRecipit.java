@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,7 @@ public class ShowRecipit extends AppCompatActivity {
     Recipit recipit;
     TextView title,recipit1,email;
     ImageView img;
+    Button GoBack;
 
     private String filepath;
     StorageReference storageReference;
@@ -53,6 +55,14 @@ public class ShowRecipit extends AppCompatActivity {
         index = getIntent().getIntExtra("index",0);
         img=findViewById(R.id.imageview);
         email=findViewById(R.id.email);
+        GoBack = findViewById(R.id.btnGoBack);
+        GoBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ShowRecipit.this, SecondPage.class);
+                startActivity(i);
+            }
+        });
         databaseReference = FirebaseDatabase.getInstance().getReference().child(product).child(String.valueOf(index));
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
